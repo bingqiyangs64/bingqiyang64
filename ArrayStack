@@ -1,0 +1,14 @@
+    public ArrayStack(int capacity) {
+   
+        array = (E[]) new Object[capacity];
+        top = 0;
+    }
+
+    public void push(E element) {
+   
+        if (top >= array.length) {
+   
+            throw new StackOverflowError();
+        }
+        array[top++] = element;
+    }
