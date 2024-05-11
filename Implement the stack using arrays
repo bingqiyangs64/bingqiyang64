@@ -1,0 +1,49 @@
+public class ArrayStack<E> {
+   
+
+    private int top; // 
+    private E[] array;
+
+    public ArrayStack(int capacity) {
+   
+        array = (E[]) new Object[capacity];
+        top = 0;
+    }
+
+    public void push(E element) {
+   
+        if (top >= array.length) {
+   
+            throw new StackOverflowError();
+        }
+        array[top++] = element;
+    }
+
+    public E pop() {
+   
+        if (isEmpty()) {
+   
+            throw new EmptyStackException();
+        }
+        return array[--top];
+    }
+
+    public E peek() {
+   
+        if (isEmpty()) {
+   
+            throw new EmptyStackException();
+        }
+        return array[top - 1];
+    }
+
+    public boolean isEmpty() {
+   
+        return top == 0;
+    }
+
+    public int size() {
+   
+        return top;
+    }
+}
