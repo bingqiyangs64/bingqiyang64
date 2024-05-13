@@ -1,0 +1,6 @@
+   if orderResp.GetAccount().Id != GetUserId(ctx) {
+      logs.CtxError(ctx, "The current user does not have permission to obtain the order info")
+      return nil, common.NewError(common.AuthError, "The current user does not have permission to obtain the order info")
+   }
+   return orderResp, nil
+}
