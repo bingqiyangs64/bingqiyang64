@@ -1,0 +1,8 @@
+			line(line1_x, line1_y, line1_x, WINDOW_HEIGHT);
+			line(line2_x, line2_y, line2_x, WINDOW_HEIGHT);
+ 
+			
+			putimage(WINDOW_WIDTH / 2 - boss1w / 2, -boss1h + boss1image, &i_boss1_1S, NOTSRCERASE);
+			putimage(WINDOW_WIDTH / 2 - boss1w / 2, -boss1h + boss1image, &i_boss1_1, SRCINVERT);
+		}
+	
