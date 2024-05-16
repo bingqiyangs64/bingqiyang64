@@ -1,0 +1,20 @@
+        gotoxy(39,14);
+        scanf("%s",mm);
+        strcpy(p->mm,mm);
+        q->next=p;
+        q=p;
+        gotoxy(39,15);
+        scanf("%s",name);
+    }
+    q->next=NULL;
+}
+  
+U* search(U *h,char *name)
+{
+    while(h=h->next,h)
+    {if(!strcmp(h->name,name))  return h;}
+    return NULL;
+}
+  
+U * createpeople(U *h)
+{
