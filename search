@@ -1,0 +1,11 @@
+}
+  
+U* search(U *h,char *name)
+{
+    while(h=h->next,h)
+    {if(!strcmp(h->name,name))  return h;}
+    return NULL;
+}
+  
+U * createpeople(U *h)
+{
